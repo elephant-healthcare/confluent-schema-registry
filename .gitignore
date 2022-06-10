@@ -21,7 +21,7 @@ trash
 # confluent-schema-registry
 #
 tmp
-dist
+# dist
 release
 
 # website
