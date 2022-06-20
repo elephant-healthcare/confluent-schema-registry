@@ -1,6 +1,6 @@
 {
   "name": "@elephant-healthcare/confluent-schema-registry",
-  "version": "3.2.1-hotfix",
+  "version": "3.2.1-hotfix.1",
   "main": "dist/index.js",
   "description": "ConfluentSchemaRegistry is a library that makes it easier to interact with the Confluent schema registry, it provides convenient methods to encode, decode and register new schemas using the Apache Avro serialization format.",
   "keywords": [
