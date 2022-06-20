@@ -1,0 +1,22 @@
+version: 2.1
+
+jobs:
+  release:
+    docker:
+      - image: cimg/node:18.4.0
+    steps:
+      - checkout
+      - run:
+          name: Set NPM token
+          command: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+      - run: yarn install
+      - run: yarn prepare:release
+      - run: npm publish release/ --access public
+
+workflows:
+  version: 2
+  main:
+    jobs:
+      - release:
+          context:
+            - npm
